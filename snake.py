@@ -10,7 +10,7 @@ class Snake:
     self.direction = vec2(0, 0)
     self.step_delay = 150
     self.time = 0
-    self.length = 3
+    self.length = 1
     self.segments = []
     self.segments_best_path = []
     for i in range(self.length):
