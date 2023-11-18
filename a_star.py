@@ -33,7 +33,6 @@ class A_Star(Proximity_Algorithm):
     for i in range(self.maxTries):
       self.current = self.getLowestFScore()
       if self.current and self.current.x == self.end.x and self.current.y == self.end.y:
-        print(self.current)
         return self.retracePath()
       if self.openSet.count(self.current) > 0:
         self.openSet.remove(self.current)

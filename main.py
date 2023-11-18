@@ -38,15 +38,13 @@ class Game:
     best_path = self.algorithm.generate(self.snake.rect, self.food.rect)
     if best_path:
       self.snake.new_point(best_path)
-    else:
-      self.new_game()
 
   def draw(self):
     self.screen.fill('black')
     self.draw_grid()
     self.snake.draw()
     self.food.draw()
-    # self.runAlgorithm()
+    self.runAlgorithm()
   
   def check_food_eaten(self):
     if self.snake.rect.colliderect(self.food.rect):
